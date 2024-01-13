@@ -10,13 +10,13 @@ const DATABASE_URL = process.env.DATABASE_URL === undefined ? "./lib/database.db
 
 module.exports = {
 
-  ANTILINK: toBool(process.env.ANTI_LINK) || false,
+  ANTILINK: toBool(process.env.ANTI_LINK) || true,
 
   LOGS: toBool(process.env.LOGS) || true,
 
   AUDIO_DATA: process.env.AUDIO_DATA || 'Jsl;Abu;https://i.imgur.com/ep3UbBP.jpg',
  
-  STICKER_PACKNAME: process.env.STICKER_PACKNAME || 'Abu;Jsl',
+  STICKER_PACKNAME: process.env.STICKER_PACKNAME || 'ʙʏ;ɪᴄᴍ',
   
   DATABASE: DATABASE_URL === "./lib/database.db" ? new Sequelize({ dialect: "sqlite", storage: DATABASE_URL, logging: false }) : new Sequelize(DATABASE_URL, {dialect: "postgres", ssl: true, protocol: "postgres", dialectOptions: { native: true, ssl: { require: true, rejectUnauthorized: false },}, logging: false }),
 
@@ -48,13 +48,13 @@ module.exports = {
 
   GOODBYE_MSG: process.env.GOODBYE_MSG || "Hi @user It was Nice Seeing you",
 
-  STICKER_DATA: process.env.STICKER_DATA || "Abu",
+  STICKER_DATA: process.env.STICKER_DATA || "ɪᴄᴍ",
 
   ACR_A: "ff489a0160188cf5f0750eaf486eee74",
 
   ACR_S: "ytu3AdkCu7fkRVuENhXxs9jsOW4YJtDXimAWMpJp",
 
-  SUDO: process.env.SUDO || "917025994178",
+  SUDO: process.env.SUDO || "94766632281",
 
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || " ",
 
